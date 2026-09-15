@@ -60,6 +60,9 @@ expect_failure "pipeline propagates failure" ./scripts/compile.sh tests/cases/ty
 pass "failed pipeline removes its requested output"
 
 make -q bin/wlp4parse || fail "parser should initially be up to date"
+# Some macOS filesystems and Make versions compare modification times at
+# one-second resolution, so cross a timestamp boundary before touching.
+sleep 1
 touch src/wlp4data.h
 if make -q bin/wlp4parse; then
   fail "header change did not invalidate parser"
