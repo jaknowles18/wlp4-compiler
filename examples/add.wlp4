@@ -1,0 +1,6 @@
+long wain(long a, long b) {
+  long sum = 0;
+  sum = a + b;
+  println(sum);
+  return sum;
+}

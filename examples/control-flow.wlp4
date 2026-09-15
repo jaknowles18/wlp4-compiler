@@ -1,0 +1,13 @@
+long wain(long n, long unused) {
+  long total = 0;
+  while (n > 0) {
+    total = total + n;
+    n = n - 1;
+  }
+  if (total == 0) {
+    println(unused);
+  } else {
+    println(total);
+  }
+  return total;
+}

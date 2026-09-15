@@ -1,0 +1,12 @@
+long wain(long size, long unused) {
+  long *data = NULL;
+  data = new long[size];
+  if (data != NULL) {
+    *data = size;
+    println(*data);
+    delete [] data;
+  } else {
+    println(unused);
+  }
+  return size;
+}

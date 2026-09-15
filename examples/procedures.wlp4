@@ -1,0 +1,10 @@
+long doubleValue(long value) {
+  return value + value;
+}
+
+long wain(long a, long b) {
+  long result = 0;
+  result = doubleValue(a);
+  println(result);
+  return result;
+}
